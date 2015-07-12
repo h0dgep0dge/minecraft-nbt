@@ -460,7 +460,10 @@ var dataview = require('jdataview');
 
 })(module.exports);
 
-},{"jdataview":2}],2:[function(require,module,exports){
+},{"jdataview":3}],2:[function(require,module,exports){
+var m = require('./');
+
+},{"./":1}],3:[function(require,module,exports){
 (function (Buffer){
 !function(factory) {
     var global = this;
@@ -804,7 +807,7 @@ var dataview = require('jdataview');
     return jDataView;
 });
 }).call(this,require("buffer").Buffer)
-},{"buffer":3}],3:[function(require,module,exports){
+},{"buffer":4}],4:[function(require,module,exports){
 /*!
  * The buffer module from node.js, for the browser.
  *
@@ -2243,7 +2246,7 @@ function decodeUtf8Char (str) {
   }
 }
 
-},{"base64-js":4,"ieee754":5,"is-array":6}],4:[function(require,module,exports){
+},{"base64-js":5,"ieee754":6,"is-array":7}],5:[function(require,module,exports){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
 ;(function (exports) {
@@ -2369,7 +2372,7 @@ var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 	exports.fromByteArray = uint8ToBase64
 }(typeof exports === 'undefined' ? (this.base64js = {}) : exports))
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = nBytes * 8 - mLen - 1
@@ -2455,7 +2458,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 
 /**
  * isArray
@@ -2490,4 +2493,4 @@ module.exports = isArray || function (val) {
   return !! val && '[object Array]' == str.call(val);
 };
 
-},{}]},{},[1]);
+},{}]},{},[2]);
